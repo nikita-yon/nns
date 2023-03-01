@@ -8,6 +8,8 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
    <link rel="shortcun icon" type="image/png" href="/images/favicon.png">
 <style>
     #para{
@@ -121,8 +123,8 @@ nav .search-container button:hover {
     <nav>
         <a href="index.html">home</a>
         <a  href="page5.html">support</a>
-       <a class="active" href="about.html">Decode programs</a>
-       <a href="pytan.html">callsigns</a>
+       <a href="about.html">Decode programs</a>
+       <a class="active" href="pytan.html">callsigns</a>
         <div class="search-container">
         <form action="action.php">
             <input type="text" placeholder="search..." name="search">
@@ -130,25 +132,39 @@ nav .search-container button:hover {
         </form>
         </div>
       </nav> 
-   
+    
     <div class="header" href="10.png">
-        <h1>Radioamateur wedsite</h1>
-        <p>---decoder programs---</p>
-      </div>
-<h1>Decoder programs download</h1>
+            <h1>Radioamateur wedsite</h1>
+            <p>---callsign generator---</p><br>
+    </div>
+            <br><br>
+<h3>generated 10 callsign</h3>
+<h5><a href="pytan.html">generate again...</a></h5>
 <br>
-<h2>Morse Code</h2>   
-<p>CwGet program --> <a href="http://www.dxsoft.com/m1/cwget.zip">download</a></p>
-   <br>
-  <h2>RTTY signal</h2>
-  <p>MixW 3.2 program --> <a href="http://www.mixw.net/files/SetupMixW3_2_105.exe">download</a></p>
-  <p>HamScope program --> <a href="https://www.qsl.net/hamscope/HamScopev155.zip">download</a></p>
+            
+<py-script> 
+import random
+import string
+        
+print("10 Radioamateur callsigns successfully generated")       
+def get_random_string(length):
+            # choose from all lowercase letter
+            letters = string.ascii_uppercase
+            num = string.digits
+            result_str = ''.join(random.choice(letters + num) for i in range(length))
+            print("random radio callsign is:", result_str)
+            
+get_random_string(5)
+get_random_string(5)
+get_random_string(5)
+get_random_string(5)
+get_random_string(5)
+get_random_string(5)
+get_random_string(5)
+get_random_string(5)
+get_random_string(5)
+get_random_string(5)
+</py-script>             
 
-<div id="para" style="background-color:rgb(123, 123, 123);">
-
-<a href="secret.html">go to the secret page...</a>
-
-</div>
 </body>
-
 </html>
