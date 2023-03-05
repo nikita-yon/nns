@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <title>nikita's electronics website</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link rel="shortcun icon" type="image/png" href="/images/favicon.png">
+<style>
+    #para{
+       text-align: center;
+    }
+ </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #dfc00b;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+</style>
+
+<style>
+   * {box-sizing: border-box;}
+
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+ overflow: hidden;
+ background-color: #ffffff;
+}
+
+nav a {
+ float: left;
+ display: block;
+ color: black;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+nav a:hover {
+ background-color: #8bc34a;
+}
+
+nav a.active {
+ background-color: #8bc34a;
+ color: rgb(255, 255, 255);
+}
+
+nav .search-container {
+ float: right;
+}
+
+nav input[type=text] {
+ padding: 6px;
+ margin-top: 8px;
+ font-size: 17px;
+ border: none;
+}
+
+nav .search-container button {
+ float: right;
+ padding: 6px;
+ margin-top: 8px;
+ margin-right: 16px;
+ background: #8bc34a;
+ font-size: 17px;
+ border: none;
+ cursor: pointer;
+}
+
+nav .search-container button:hover {
+ background: #bdbdbd;
+}
+
+@media screen and (max-width: 600px) {
+ nav .search-container {
+   float: none;
+ }
+ nav a, nav input[type=text], nav .search-container button {
+   float: none;
+   display: block;
+   text-align: left;
+   width: 100%;
+   margin: 0;
+   padding: 14px;
+ }
+ nav input[type=text] {
+   border: 1px solid #689f38;  
+ }
+}
+</style>
+
+</head>
+
+
+<body style="background-color:rgb(155, 210, 131);">
+
+   <nav>
+      <a href="index.html">home</a>
+      <a href="page5.html">support</a>
+     <a href="about.html">Decode programs</a>
+     <a href="pytan.html">callsigns</a>
+     <a class="active" href="111.html">Morse trainer</a>
+      <div class="search-container">
+      <form action="action.php">
+          <input type="text" placeholder="search..." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      </div>
+    </nav> 
+
+   <div class="header" href="10.png">
+    <strong><bold><h1>Radioamateur wedsite</h1></bold></strong>
+      <strong><bold><p>---morse trainer---</p></bold></strong>
+    </div>
+    
+    
+    <div>
+        <h1>Transmitting practice — Send Morse Code with the Mouse Button</h1>
+        
+        <p>Use the "Key" button or Space bar to send Morse code. QRS/QRQ buttons change the speed the decoder expects to decode, Clear (or Escape) removes the decoded text.</p>
+        
+        <form onsubmit="return false;">
+        <input style="width:250px;height:250px" type="submit" value="Key" onmousedown="down();return false;" onmouseup="up();return false;" ontouchstart="down();return false;" ontouchend="up();return false;"><br>
+        <input type="submit" value="QRQ" onclick="changespeed(1);return false;">
+        <input type="submit" value="QRS" onclick="changespeed(0);return false;">
+        <input type="submit" value="Clear" onclick="document.getElementById('jskey').innerHTML = '&nbsp;';return false;">
+        </form>
+        
+        <script>
+        
+        var audioCtx, oscillator, biquadFilter, gainNode;
+        
+        var audio_started = false;
+        
+        function init_audio () {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            oscillator = audioCtx.createOscillator();
+            biquadFilter = audioCtx.createBiquadFilter();
+            gainNode = audioCtx.createGain();
+            biquadFilter.type = "lowpass";
+            biquadFilter.frequency.setValueAtTime(600, audioCtx.currentTime);
+            biquadFilter.Q.setValueAtTime(15, audioCtx.currentTime);
+        
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(600, audioCtx.currentTime); // value in hertz
+        
+            oscillator.connect(gainNode);
+            gainNode.connect(biquadFilter);
+            biquadFilter.connect(audioCtx.destination);
+        
+            oscillator.start();
+        
+            gainNode.gain.value = 0;
+            audio_started = true;
+        }
+        
+        document.onkeydown = function(evt) {
+            evt = evt || window.event;
+            if ("key" in evt) {
+                if (evt.key === "Escape" || evt.key === "Esc") {
+                    document.getElementById('jskey').innerHTML = "&nbsp;";
+                }
+                else if (evt.key == " "){
+                    down();
+                }
+            } 
+        }
+        
+        document.onkeyup= function(evt) {
+            evt = evt || window.event;
+            if ("key" in evt) {
+                if (evt.key == " "){
+                    up();
+                }
+            } 
+        }
+        
+        
+        
+        </script>
+        
+        
+        <div id="speed">Speed: 8WpM; Ratio: 3; eff. Speed: 10.5</div><br>
+        <div class="quoted" id="jskey">&nbsp;</div><br>
+        
+        <p>This Morse decoder </p>
+        
+        
+        <script>
+            var time;
+            var temp;
+            var lastchar = "";
+            var dotlength = 150;
+            var avgdot = dotlength;
+            var avgdash = dotlength*3;
+            var idletime = new Date().getTime();
+            var keydown = 0;
+            var sent = 0;
+            var queue = new Queue();
+        
+            var code = new Array();
+            code['.-'] = "A"; code['-...'] = "B"; code['-.-.'] = "C";
+            code['-..'] = "D"; code['.'] = "E"; code['..-.'] = "F";
+            code['--.'] = "G"; code['....'] = "H"; code['..'] = "I";
+            code['.---'] = "J"; code['-.-'] = "K"; code['.-..'] = "L";
+            code['--'] = "M"; code['-.'] = "N"; code['---'] = "O";
+            code['.--.'] = "P"; code['--.-'] = "Q"; code['.-.'] = "R";
+            code['...'] = "S"; code['-'] = "T"; code['..-'] = "U";
+            code['...-'] = "V"; code['.--'] = "W"; code['-..-'] = "X";
+            code['-.--'] = "Y"; code['--..'] = "Z"; code['.----'] = "1";
+            code['..---'] = "2"; code['...--'] = "3"; code['....-'] = "4";
+            code['.....'] = "5"; code['-....'] = "6"; code['--...'] = "7";
+            code['---..'] = "8"; code['----.'] = "9"; code['-----'] = "0";
+            code['.-.-.-'] = "."; code['..--..'] = "?"; code['---...'] = ":";
+            code['-....-'] = "-"; code['-.--.-'] = ")"; code['-.--.'] = "(";
+            code['.-.-.'] = "+"; code['...-.-'] = "<u>SK</u>";
+            code['-.-.-'] = "<u>CT</u>"; code['.--.-.'] = "@";
+            code['-..-.'] = "/";
+            code['--..--'] = ",";
+            code['---.'] = '&Ouml;';
+            code['.-.-'] = '&Auml;';
+            code['..--'] = '&Uuml;';
+            code['.--.-'] = '&Aring;';
+            code['........'] = '<u>ERR</u>';
+            code['.-...'] = '<u>AS</u>';
+            code['-...-'] = '=';
+        
+            window.setInterval("checkspace();", 5*dotlength);
+        
+        
+            function down () {
+                if (!audio_started) {
+                    init_audio();
+                }
+                time = new Date().getTime();
+                checkspace();
+                keydown = 1;
+                gainNode.gain.value = 0.1;
+            }
+        
+        
+            function up () {
+                keydown = 0;
+                gainNode.gain.value = 0.0;
+                time = new Date().getTime() - time;
+                if (time > dotlength) {
+                    element = "-";
+                    avgdash = (avgdash + time)/2;
+                }
+                else {
+                    element = ".";
+                    avgdot = (avgdot + time)/2;
+                }
+                lastchar += element;
+                update();
+                idletime = new Date().getTime();
+            }
+        
+            function checkspace () {
+                if (keydown) { return; }
+                var mytime = new Date().getTime();
+                var diff = mytime-idletime;
+        
+                if (diff > 1000) {
+                    if (queue.getlength() > 0) {
+                        submittext(queue.purge(), Math.round(effspeed));
+                    }
+                }
+        
+                if (diff > 2*dotlength) {
+                    if (code[lastchar]) {
+                        append(code[lastchar], "jskey");
+                        queue.add(code[lastchar]);
+                    }
+                    else if (lastchar) {
+                        append("*", "jskey");
+                        queue.add('*');
+                    }
+                    lastchar = '';
+                    if (time-idletime > 4*dotlength) {
+                        append(" ", "jskey");
+                        queue.add(' ');
+                    }
+                }
+            }
+            
+            function append(what, where) {
+                document.getElementById(where).innerHTML += what;
+            }
+        
+            function changespeed (a) {
+                if (a) {
+                    dotlength -= 5;	
+                }
+                else {
+                    dotlength += 5;	
+                }
+                update();
+            }
+        
+            function update () {
+                wpm = Math.round(10*1200/dotlength)/10;
+                ratio = Math.round(10*avgdash / avgdot)/10;
+                effspeed = Math.round(10*3600/avgdash)/10;
+                var x = document.getElementById('speed');
+                x.innerHTML = "Speed: "+wpm+"WpM";
+                x.innerHTML += "; Ratio: " + ratio;
+                x.innerHTML += "; eff. Speed: " + effspeed;
+            }
+        
+            function Queue () {
+                this.content = '';
+                this.tmp = '';
+                this.add = function (chr) {
+                        this.content += chr;
+                }
+                this.getlength = function () {
+                        return this.content.length;
+                }
+                this.purge = function () {
+                        this.tmp = this.content;
+                        this.content = '';
+                        return this.tmp+ ' ';
+                }
+            }
+        
+        
+        function submittext (text, wpm) {
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+        </div>
+
+</body>
+</html>
