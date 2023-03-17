@@ -8,8 +8,6 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
    <link rel="shortcun icon" type="image/png" href="/images/favicon.png">
 <style>
     #para{
@@ -123,11 +121,11 @@ nav .search-container button:hover {
     <nav>
         <a href="index.html">home</a>
         <a  href="page5.html">support</a>
-       <a href="about.html">Decode programs</a>
-       <a class="active" href="pytan.html">callsigns</a>
+       <a  href="about.html">Decode programs</a>
+       <a href="pytan.html">callsigns</a>
        <a  href="111.html">Morse trainer</a>
        <a  href="translatoe.html">Morse Translator</a>
-       <a  href="schemes.html">radio circuits</a>
+       <a  class="active" href="schemes.html">radio circuits</a>
        <a  href="target.html">target</a>
         <div class="search-container">
         <form action="action.php">
@@ -136,39 +134,30 @@ nav .search-container button:hover {
         </form>
         </div>
       </nav> 
-    
+   
     <div class="header" href="10.png">
-            <h1>Radioamateur wedsite</h1>
-            <p>---callsign generator---</p><br>
-    </div>
-            <br><br>
-<h3>generated 10 callsign</h3>
-<h5><a href="pytan.html">generate again...</a></h5>
-<br>
-            
-<py-script> 
-import random
-import string
-        
-print("10 Radioamateur callsigns successfully generated")       
-def get_random_string(length):
-            # choose from all lowercase letter
-            letters = string.ascii_uppercase
-            num = string.digits
-            result_str = ''.join(random.choice(letters + num) for i in range(length))
-            print("random radio callsign is:", result_str)
-            
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-</py-script>             
+        <h1>Radioamateur wedsite</h1>
+        <p>---target---</p>
+      </div>
+<div id="para">
+    <br><br><br>
+<img src="images/ic7300.png" id="para">
 
-</body>
-</html>
+      <div class="container">
+        <h2 id="para">The target is IC-7300</h2>
+        <p id="para">ic7300 is a transciever (Output Power- 100W (25W AM) \ RX Frequencies- 0.030-74.800)</p> 
+        <a href="https://www.icomamerica.com/en/products/amateur/hf/7300/default.aspx">More</a>
+        <p>the progress of money = Need 6200 shekels to buy this!</p>
+        <div class="progress">
+           <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width:12%">
+             770 ISRAEL SHEKELS
+           </div>
+         </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+
+
+
+
