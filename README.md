@@ -1,1 +1,1 @@
-# nns
+# nice website for radioamateurs!
