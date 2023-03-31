@@ -29,7 +29,7 @@ body {
   padding: 60px;
   text-align: center;
   background: #dfc00b;
-  color: white;
+  color: white; 
   font-size: 30px;
 }
 
@@ -125,6 +125,7 @@ nav .search-container button:hover {
      <a href="pytan.html">callsigns</a>
      <a class="active" href="111.html">Morse trainer</a>
      <a  href="translatoe.html">Morse Translator</a>
+     <a  href="bands.html">HF bands</a>
      <a  href="schemes.html">radio circuits</a>
       <div class="search-container">
       <form action="action.php">
@@ -164,7 +165,7 @@ nav .search-container button:hover {
             biquadFilter = audioCtx.createBiquadFilter();
             gainNode = audioCtx.createGain();
             biquadFilter.type = "lowpass";
-            biquadFilter.frequency.setValueAtTime(600, audioCtx.currentTime);
+            biquadFilter.frequency.setValueAtTime(700, audioCtx.currentTime);
             biquadFilter.Q.setValueAtTime(15, audioCtx.currentTime);
         
             oscillator.type = 'sine';

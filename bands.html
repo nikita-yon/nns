@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+
+   
+<head>
+
+   <title>nikita's electronics website</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <link rel="shortcun icon" type="image/png" href="/images/favicon.png">
+<style>
+    #para{
+       text-align: center;
+    }
+ </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #dfc00b;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+</style>
+
+<style>
+   * {box-sizing: border-box;}
+
+body {
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+ overflow: hidden;
+ background-color: #ffffff;
+}
+
+nav a {
+ float: left;
+ display: block;
+ color: black;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+nav a:hover {
+ background-color: #8bc34a;
+}
+
+nav a.active {
+ background-color: #8bc34a;
+ color: rgb(255, 255, 255);
+}
+
+nav .search-container {
+ float: right;
+}
+
+nav input[type=text] {
+ padding: 6px;
+ margin-top: 8px;
+ font-size: 17px;
+ border: none;
+}
+
+nav .search-container button {
+ float: right;
+ padding: 6px;
+ margin-top: 8px;
+ margin-right: 16px;
+ background: #8bc34a;
+ font-size: 17px;
+ border: none;
+ cursor: pointer;
+}
+
+nav .search-container button:hover {
+ background: #bdbdbd;
+}
+
+@media screen and (max-width: 600px) {
+ nav .search-container {
+   float: none;
+ }
+ nav a, nav input[type=text], nav .search-container button {
+   float: none;
+   display: block;
+   text-align: left;
+   width: 100%;
+   margin: 0;
+   padding: 14px;
+ }
+ nav input[type=text] {
+   border: 1px solid #689f38;  
+ }
+}
+</style>
+
+</head>
+
+
+<body style="background-color:rgb(155, 210, 131);" style="position: relative; min-height: 100%; top: 0px;">
+
+   <nav>
+      <a  href="index.html">home</a>
+      <a   href="page5.html">support</a>
+     <a href="about.html">Decode programs</a>
+     <a href="pytan.html">callsigns</a>
+     <a  href="111.html">Morse trainer</a>
+     <a  href="translatoe.html">Morse Translator</a>
+     <a class="active" href="bands.html">HF bands</a>
+     <a  href="schemes.html">radio circuits</a>
+     <a  href="target.html">target</a>
+      <div class="search-container">
+      <form action="action.php">
+          <input type="text" placeholder="search..." name="search">
+          <button type="submit"><i class="search"></i></button>
+      </form>
+      </div>
+    </nav> 
+
+   <div class="header" href="10.png">
+    <strong><bold><h1>Radioamateur wedsite</h1></bold></strong>
+      <strong><bold><p>---bands---</p></bold></strong>
+    </div>
+
+
+        <div id="examplePopup1" style="display:none;"><div style="float:left;padding:20px 20px 20px 20px;"><h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Enter your email address</font></font></h4><input type="text" style="margin-top:10px" name="useremailID" id="useremailID"><input type="hidden" id="emailpostID"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input id="guest_email" style="margin-top:10px" class="button-primary" type="submit" name="email_submit" value="submit"></font></font></div></div>
+        <!-- Alternate Stylesheet -->
+        <link href="https://srr.ru/wp-content/themes/wp-bold110/styles/default.css" rel="stylesheet" type="text/css">
+        
+        <!-- Custom Styles from Theme Setting Page -->
+        <style type="text/css">
+        
+        h1,h2,h3,h4,h5,h6,h7,#sitetitle .title {font-family:Helvetica,Arial,sans-serif;font-weight:bold !important;}
+        h1,h2,h3,h4,h5,h6,h7,#sitetitle .title {font-weight:bold !important;}
+        .post-title a:hover,.post-title a:active {color:#cf0000 !important;}
+        #sitetitle .title,#sitetitle .description {float:none;text-indent:-999em;position:absolute;display:none;left:-999em;}
+        #header {padding:20px 2%;max-width:none;background-color:#ffffff;}
+        #topnav,#topnav ul ul a {font-size:10pt;font-weight:bold;font-family:Helvetica,Arial,sans-serif;background:#134e91;}
+        #topnav {border:0;}
+        #topnav ul ul,#topnav ul ul a {border-color:#fff;}
+        #topnav ul li.searchform {padding-right:4px;padding-left:4px;}
+        #topnav ul a,#topnav ul ul a {color:#ffffff;}
+        #topnav ul a:hover,#topnav ul ul a:hover {color:#ffffff;}
+        #topnav ul a:hover,#topnav ul ul a:hover {background-color:#000000;}
+        #catnav,#catnav ul ul a {font-size:10pt;font-weight:bold;font-family:Helvetica,Arial,sans-serif;background-color:#ffffff;}
+        #catnav {border:0;} #catnav ul ul,#catnav ul ul a {border-color:#fff;}
+        #catnav ul a,#catnav ul ul a {color:#134e91;}
+        #catnav ul a:hover,#catnav ul ul a:hover {color:#cf0000;}
+        #catnav ul a:hover,#catnav ul ul a:hover {background-color:#ffffff;}
+        .maincontent, #content {font-size:9pt;}
+        .maincontent a, .maincontent a:link, .maincontent a:visited, #content a, #content a:link, #content a:visited {color:#134e91;}
+        .maincontent a:hover, .maincontent a:active, #content a:hover, #content a:active {color:#cf0000;}
+        #contentright a:hover, #contentright a:active {color:#cf0000;}
+        #commentform input#submit:hover,.archive-tabs a:hover,.archive-tabs a:active,.archive-tabs .ui-tabs-selected a,a.more-link:hover,a.more-link:active,#searchform #submitbutton:hover,p.email-form .subbutton:hover,a.comment-reply-link:hover,a.comment-reply-link:active {color:#cf0000;}
+        #footer {font-size:10pt;}
+        </style>
+        
+        <!-- Styles from custom.css -->
+        <link href="https://srr.ru/wp-content/themes/wp-bold110/custom.css" rel="stylesheet" type="text/css">
+        
+            <!-- MobileMenu JS -->
+         
+        
+        <script type="text/javascript" src="https://srr.ru/wp-content/plugins/si-captcha-for-wordpress/captcha/si_captcha.js?ver=1680283711"></script>
+        <!-- begin SI CAPTCHA Anti-Spam - login/register form style -->
+        <style type="text/css">
+        .si_captcha_small { width:175px; height:45px; padding-top:10px; padding-bottom:10px; }
+        .si_captcha_large { width:250px; height:60px; padding-top:10px; padding-bottom:10px; }
+        img#si_image_com { border-style:none; margin:0; padding-right:5px; float:left; }
+        img#si_image_reg { border-style:none; margin:0; padding-right:5px; float:left; }
+        img#si_image_log { border-style:none; margin:0; padding-right:5px; float:left; }
+        img#si_image_side_login { border-style:none; margin:0; padding-right:5px; float:left; }
+        img#si_image_checkout { border-style:none; margin:0; padding-right:5px; float:left; }
+        img#si_image_jetpack { border-style:none; margin:0; padding-right:5px; float:left; }
+        img#si_image_bbpress_topic { border-style:none; margin:0; padding-right:5px; float:left; }
+        .si_captcha_refresh { border-style:none; margin:0; vertical-align:bottom; }
+        div#si_captcha_input { display:block; padding-top:15px; padding-bottom:5px; }
+        label#si_captcha_code_label { margin:0; }
+        input#si_captcha_code_input { width:65px; }
+        p#si_captcha_code_p { clear: left; padding-top:10px; }
+        .si-captcha-jetpack-error { color:#DC3232; }
+        </style>
+        <!-- end SI CAPTCHA Anti-Spam - login/register form style -->
+        <style type="text/css">/** Mega Menu CSS: fs **/</style>
+        
+            
+        <meta name="mailru-verification" content="18f761107296ca32">
+        
+        
+        
+        
+        
+        <div id="outer-wrap">
+        
+            <div id="wrap">
+        
+                
+        
+                        
+                
+                
+                
+            
+            <div id="page" class="clearfix">
+        
+                <div id="contentleft" class="clearfix">
+        
+                    
+                    
+                    
+                    
+                    <div id="content" class="maincontent">
+        
+        
+                        <div class="post clearfix" id="post-main-26896">
+        
+                            
+                            <div class="entry">
+        
+                                <h1 class="page-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HF bands</font></font></h1>
+        
+                                
+                                <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frequency plan for HF bands (frequencies below 30 MHz) IARU Region 1, brought into line with Russian legislation in the field of communications</font></font></strong></p>
+        <table style="width: 594px;">
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; width: 86px;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frequency </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        (kHz)</font></font></strong></td>
+        <td style="border-color: #000080; width: 51.4667px;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maximum </font><font style="vertical-align: inherit;">
+        signal bandwidth </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        ( </font><font style="vertical-align: inherit;">
+        Hz </font><font style="vertical-align: inherit;">
+        )</font></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font><br><font style="vertical-align: inherit;"></font></strong></td>
+        <td style="border-color: #000080; width: 432.533px;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usage</font></font></strong></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 2200 meters:</font></font></strong>&nbsp;</p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">135.7–137.8</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, QRSS and narrowband digital modes</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 160 meters:</font></font></strong>&nbsp;</p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1810–1838</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, 1836 kHz - QRP center of activity</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1838–1840</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">narrowband views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1840–1843</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views *</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1843–2000</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types*</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 80 meters:</font></font></strong>&nbsp;</p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3500–3510</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, predominantly for intercontinental radio communications</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3510–3560</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, predominantly competition, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        3555 kHz - center of QRS activity</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3560–3570</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, 3560 kHz - QRP Activity Center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3570–3580</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3580–3600</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3600–3620</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3600–3650</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, predominantly SSB competition, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        3630 kHz - DV activity center*</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3650–3700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, 3690 kHz - activity center SSB QRP</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3700–3775</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, predominantly for SSB competitions, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        3735 kHz - image transmission activity center </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        3760 kHz - emergency radio activity center in Region 1</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3775–3800</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types, mainly for SSB competitions, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        mainly for intercontinental radio communications</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 40 meters:</font></font></strong>&nbsp;</p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7000–7040</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, 7030 kHz - QRP Activity Center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7040–7050</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Narrowband Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7050–7053</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Narrowband Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7053–7060</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7060–7100</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, predominantly for SSB competitions, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        7070 kHz - DV activity center, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        7090 kHz - SSB QRP activity center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7100–7130</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, predominantly for SSB competitions </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        7110 kHz - emergency radio activity center in Region 1</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7130–7175</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, predominantly for SSB competitions, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        7165 kHz - the center of activity of the image transmission</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7175–7200</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types, mainly for SSB competitions, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        mainly for intercontinental radio communications</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 30 meters:</font></font></strong>&nbsp;</p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10100–10130</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, 10116 kHz - QRP Activity Center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10130–10150</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Narrowband Views - Digital Views</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SSB transmissions are permitted to radio stations directly involved in life-saving traffic.</font></font></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The radio frequency band 10120 - 10140 kHz can be used for SSB transmissions in Africa south of the equator during daylight hours. </font><font style="vertical-align: inherit;">The transmission of bulletins by any kind of modulation is prohibited.</font></font></p>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 20 meters:</font></font></strong>&nbsp;</p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14000–14060</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, predominantly competition, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        14055 kHz - center of QRS activity</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14060–14070</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, 14060 kHz - QRP Activity Center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14070–14099</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Narrowband Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #800000;" width="17%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14099–14101</font></font></span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="7%"><span style="color: #ffffff;">&nbsp;</span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="74%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBP, exclusively for lighthouses</font></font></span></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14101–4112</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14112–4125</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14125–14300</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, predominantly for SSB competitions, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        14130 kHz - DV activity center </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        14195 kHz ± 5 kHz - mainly for radio expeditions </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        14230 kHz - image transmission activity center </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        14285 kHz - SSB QRP activity center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14300–14350</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        14300 kHz - worldwide emergency radio activity center</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 17 meters:</font></font></strong>&nbsp;</p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18068–18095</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, 18086 kHz - QRP Activity Center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18095–18109</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Narrowband Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="background-color: #800000; border-color: #000080;" width="17%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18109–18111</font></font></span></td>
+        <td style="background-color: #800000; border-color: #000080;" width="7%"><span style="color: #ffffff;">&nbsp;</span></td>
+        <td style="background-color: #800000; border-color: #000080;" width="74%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBP, exclusively for lighthouses</font></font></span></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18111–18120</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18120–18168</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        18130 kHz - SSB activity center QRP, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        18150 kHz - DV activity center, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        18160 kHz - worldwide emergency radio activity center</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 15 meters:</font></font></strong></p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21000–21070</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        21055 kHz - QRS activity center, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        21060 kHz - QRP activity center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21070–21110</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Narrowband Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21110–21120</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes except SSB, digital modes &nbsp;&nbsp;&nbsp;&nbsp;</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21120–21149</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">narrowband views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #800000;" width="17%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21149–21151</font></font></span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="7%"><span style="color: #ffffff;">&nbsp;</span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="74%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBP, exclusively for lighthouses</font></font></span></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21151–21450</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        21180 kHz DV Activity Center, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        21285 kHz SSB QRP Activity Center, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        21340 kHz Image Transmission Activity Center, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        21360 kHz World Emergency Radio Activity Center</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 12 meters:</font></font></strong>&nbsp;</p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24890–24915</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, 24906 kHz - QRP Activity Center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24915–24929</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Narrowband Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #800000;" width="17%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24929–24931</font></font></span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="7%"><span style="color: #ffffff;">&nbsp;</span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="74%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBP, exclusively for lighthouses</font></font></span></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24931–24940</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24940–24990</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        24950 kHz SSB QRP activity center, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        24960 kHz DV activity center</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Range 10 meters:</font></font></strong>&nbsp;</p>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080; background-color: #fafac8;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28000-28070</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">200</font></font></td>
+        <td style="border-color: #000080; background-color: #fafac8;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CW, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        28055 kHz - QRS activity center, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        28060 kHz - QRP activity center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28070–28150</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Predominant usecoband views - digital views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #fac896;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28150–28190</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">500</font></font></td>
+        <td style="border-color: #000080; background-color: #fac896;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">narrowband views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #800000;" width="17%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28190–28199</font></font></span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="7%"><span style="color: #ffffff;">&nbsp;</span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="74%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBP, Time Sharing Regional Beacons</font></font></span></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #800000;" width="17%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28199–28201</font></font></span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="7%"><span style="color: #ffffff;">&nbsp;</span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="74%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBP, Time Sharing World Beacons</font></font></span></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #800000;" width="17%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28201–28225</font></font></span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="7%"><span style="color: #ffffff;">&nbsp;</span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="74%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBP, continuous beacons</font></font></span></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28225–28300</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types - lighthouses</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28300–28320</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fafa;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28320–29000</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fafa;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        28330 kHz - DV, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        28360 kHz - activity center SSB QRP, </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        28680 kHz - image activity center</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29000–29100</font></font><p></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29100–29200</font></font></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29200–29300</font></font></p></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6000</font></font><p></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6000</font></font></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6000</font></font></p></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types</font></font><p></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types - FM simplex - channels with a step of 10 kHz</font></font></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All Views - Digital Views</font></font></p></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29300–29510</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6000</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Satellite connection</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #800000;" width="17%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29510–29520</font></font></span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="7%"><span style="color: #ffffff;">&nbsp;</span></td>
+        <td style="border-color: #000080; background-color: #800000;" width="74%"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">guard interval</font></font></span></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29520–29590</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6000</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types - FM repeaters, input frequencies (RH1 - RH8)</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29600</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6000</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types - FM calling channel</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29610</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6000</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types - FM operation via simplex repeater</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="17%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29620–29700</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="7%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6000</font></font></td>
+        <td style="border-color: #000080; background-color: #96fa9d;" width="74%"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All types - FM repeaters, output frequencies (RH1 - RH8)***</font></font></td>
+        </tr>
+        </tbody>
+        </table>
+        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Permissible powers</font></font></h4>
+        <table>
+        <tbody>
+        <tr>
+        <td style="border-color: #000080;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Category</font></font></strong></td>
+        <td style="border-color: #000080; text-align: center;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maximum </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        peak </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        power</font></font></strong></td>
+        <td style="border-color: #000080; text-align: center;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Note</font></font></strong></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First</font></font></td>
+        <td style="border-color: #000080; text-align: center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1000 W</font></font></td>
+        <td style="border-color: #000080;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All bands except 2200 m and 160 m</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Second</font></font></td>
+        <td style="border-color: #000080; text-align: center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">100 W</font></font></td>
+        <td style="border-color: #000080;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All bands except 2200 m and 160 m</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Third</font></font></td>
+        <td style="border-color: #000080; text-align: center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10 W</font></font></td>
+        <td style="border-color: #000080;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All bands except 2200 m and 160 m</font></font></td>
+        </tr>
+        <tr>
+        <td style="border-color: #000080; background-color: #800000;"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4th</font></font></span></td>
+        <td style="border-color: #000080; background-color: #800000; text-align: center;"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Work prohibited</font></font></span></td>
+        <td style="border-color: #000080; background-color: #800000;"><span style="color: #ffffff;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All bands</font></font></span></td>
+        </tr>
+        </tbody>
+        </table>
+        <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Conventions</font></font></h4>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All modes: CW, SSB and modes for which activity centers are indicated, as well as AM. </font><font style="vertical-align: inherit;">(When using AM, care must be taken not to interfere with stations in the adjacent channel)</font></font></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Image transmission: Any method of image transmission - analog or digital - in which the signal has the appropriate bandwidth. </font><font style="vertical-align: inherit;">For example, SSTV or FAX.</font></font></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Narrowband modes: All modes having a signal bandwidth not exceeding 500 Hz. </font><font style="vertical-align: inherit;">For example, CW, RTTY, PSK, etc.</font></font></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Digital modes: Any digital modes that have an appropriate signal bandwidth. </font><font style="vertical-align: inherit;">For example, RTTY, PSK, MT63, etc.</font></font></p>
+        <p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notes</font></font></strong></p>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The frequencies in the plan are understood as signal frequencies and not as suppressed carrier frequencies. </font><font style="vertical-align: inherit;">The entire signal band must fit within the allocated radio frequency band.</font></font></p>
+        <p><span id="result_box" class="" lang="ru"><span title="To prevent any out of band transmission the maximum dial setting for USB Voice mode should be 3 kHz below upper band edge on bands 20 m to 10 m."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">To prevent transmissions outside the allocated bands, the maximum frequency value on the Suppressed Carrier Tuning Indicator for USB (voice) mode should be 3 kHz below the top of the band on the 20 m to 10 m bands.</font></font></span></span></p>
+        <p><span title="(*) Lowest dial setting for LSB Voice mode: 1843, 3603 and 7053 kHz"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(*) </font></font><span title="To prevent any out of band transmission the maximum dial setting for USB Voice mode should be 3 kHz below upper band edge on bands 20 m to 10 m."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">minimum frequency value on the tuning indicator showing the suppressed carrier frequency for LSB (voice) mode</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> : 1843, 3603 and 7053 kHz</font></font></span></p>
+        <p><span title="CW QSOs are allowed in all radio frequency bands except for the bands reserved exclusively for radio beacons."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Morse code (CW) QSOs are allowed in all radio frequency bands except for the bands reserved exclusively for radio beacons. </font></font></span><span title="(Recommendation DV05_C4_Rec_13)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(IARU Recommendation DV05_C4_Rec_13)</font></font></span></p>
+        <p><span title="Amplitude modulation (AM) may be used in the telephony sub-bands providing consideration is given to adjacent channel users."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Amplitude modulation (AM) can be used in telephone sections (LSB, USB) provided it does not interfere with stations on adjacent channels. </font></font></span><span title="(NRRL Davos 05)."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(NRRL Davos 05).</font></font></span></p>
+        <p><span title="Using the sideband"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Using the sidebands</font></font></strong> </span></p>
+        <p><span id="result_box" class="" lang="ru"><span title="Using the sideband"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Below </font></font></span><span title="Below 10 MHz, the use of the lower sideband (LSB) is recommended, above 10 MHz, the use of the upper sideband (USB)."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10 MHz, the lower band (LSB) is used; above 10 MHz, the upper band (USB).</font></font></span></span></p>
+        <p><span title="Competitions"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Competitions</font></font></strong></span></p>
+        <p><span title="Where no DX traffic is involved, the contest segments should not include 3 500 – 3 510 kHz or 3 775-3 800 kHz."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">If no DX traffic is involved, competitions must not be held in the bands 3500-3510 kHz and 3775-3800 kHz.</font></font></span></p>
+        <p><span title="Non-contesting radio amateurs are recommended to use the contest-free HF bands (30, 17 and 12 m) during the largest international contests."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">During major international competitions, non-participating radio amateurs are encouraged to use the WARC HF bands (30, 17 and 12m) . </font></font></span><span title="(DV05_C4_Rec_07)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(DV05_C4_Rec_07)</font></font></span></p>
+        <p><span title="Contests should be restricted to 160, 80, 40, 20, 15 and 10 m."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Competitions must be limited to the 160, 80, 40, 20, 15 and 10m bands. The </font></font></span><span title="That is 60, 30, 17, and 12 m bands shall not be used for contests."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">60, 30, 17 and 12m bands must not be used for competition. </font></font></span><span title="(VIE16_C4_Rec_06*)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(VIE16_C4_Rec_06)</font></font></span></p>
+        <p><span title="For more recommendations about contest segments, see the IARU Region 1 HF Manager Handbook."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">See the IARU Region 1 HF Managers' Guide for further guidance on the RF bands used for competition.</font></font></span></p>
+        <p><span title="radio beacons"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">radio beacons</font></font></strong></span></p>
+        <p><span title="For information about IARU Region 1 beacon policy, see the IARU Region 1 HF Manager Handbook."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">See the IARU Region 1 HF Managers' Guide for policy information on the installation and use of beacons.</font></font></span></p>
+        <p><span title="Remote radio control"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remote radio control</font></font></strong></span></p>
+        <p><span title="Remote controlled operation is defined to mean operation where a licensed operator controls an amateur radio station from a remote control terminal."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Radio remote control refers to the situation where a licensed radio operator controls the operation of an amateur radio station from a remote control terminal.</font></font></span></p>
+        <p><span title="Where a station is operated remotely, the following conditions shall apply:"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">If the station is operating remotely, the following conditions apply:</font></font></span></p>
+        <p><span title="Remote operation must be permitted, or not objected to, by the Regulatory Authority of the country where the station is located. &nbsp;&nbsp;&nbsp;&nbsp;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The communications administration of the country in whose territory the remotely controlled amateur radio station is located must either allow or not object to such control.</font></font></span></p>
+        <p><span id="result_box" class="" lang="ru"><span title="The call sign to be used should be the call sign issued by the Regulatory Authority of the country in which the station is located."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The call sign used for remote operation must be issued by the communications administration of the country in whose territory the remote-controlled radio station is located. </font></font></span><span title="This applies irrespective of the location of the operator. &nbsp;&nbsp;&nbsp;&nbsp;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">This rule applies regardless of the location of the operator.</font></font></span></span></p>
+        <p><span id="result_box" class="" lang="ru"><span title="It should be noted that the CEPT T/R 61-01 agreement only applies to people using their own call sign, with the appropriate country prefix, when the operator is actually visiting that country, not for remote operation. &nbsp;&nbsp;&nbsp;&nbsp;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">It should be noted that CEPT T/R 61-01 only applies to radio operators using their own call sign with the appropriate country prefix, and only when the radio operator is actually visiting that country, and not for remote control.</font></font></span></span></p>
+        <p><span id="result_box" class="" lang="ru"><span title="Any further requirements regarding the participation of remotely controlled stations in contests or award programs are a matter for the various contest or award program organizers."><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Any additional requirements regarding the participation of remote controlled stations in competitions or award programs are subject to the regulation of their organizers. </font></font></span><span title="(SC11_C4_REC_07) and (VA14_C4_REC_04)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(SC11_C4_REC_07) and (VA14_C4_REC_04).</font></font></span></span></p>
+        <p>&nbsp;</p>
+        
+                                <div style="clear:both;"></div>
+        
+                                
+                            </div>
+        
+                        </div>
+        
+                        
+                    </div>
+        
+                    
+                </div>
+        
+        
+                <div id="contentright">
+        
+                    
+        
+                    
+                </div>
+        
+        
+                </div> <!-- end #page div -->
+        
+                
+            </div>  <!-- end #wrap div -->
+        
+        </div> <!-- end #outer-wrap div -->
+        
+        
+        
+        
+        
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+           m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+           (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        
+           ym(31469708, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+           });
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/31469708" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter --><script type="text/javascript" id="thickbox-js-extra">
+        /* <![CDATA[ */
+        var thickboxL10n = {"next":"\u0414\u0430\u043b\u0435\u0435 \u2192","prev":"\u2190 \u041d\u0430\u0437\u0430\u0434","image":"\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435","of":"\u0438\u0437","close":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","noiframes":"\u042d\u0442\u0430 \u0444\u0443\u043d\u043a\u0446\u0438\u044f \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0438 \u043f\u043b\u0430\u0432\u0430\u044e\u0449\u0438\u0445 \u0444\u0440\u0435\u0439\u043c\u043e\u0432. \u0423 \u0432\u0430\u0441 \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u044b \u0442\u0435\u0433\u0438 iframe, \u043b\u0438\u0431\u043e \u0432\u0430\u0448 \u0431\u0440\u0430\u0443\u0437\u0435\u0440 \u0438\u0445 \u043d\u0435 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442.","loadingAnimation":"https:\/\/srr.ru\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="https://srr.ru/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105" id="thickbox-js"></script>
+        <script type="text/javascript" src="https://srr.ru/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.5.1" id="swv-js"></script>
+        <script type="text/javascript" id="contact-form-7-js-extra">
+        /* <![CDATA[ */
+        var wpcf7 = {"api":{"root":"https:\/\/srr.ru\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="https://srr.ru/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.5.1" id="contact-form-7-js"></script>
+        <script type="text/javascript" src="https://srr.ru/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js"></script>
+        <script type="text/javascript" id="megamenu-js-extra">
+        /* <![CDATA[ */
+        var megamenu = {"timeout":"300","interval":"100"};
+        /* ]]> */
+        </script>
+        <script type="text/javascript" src="https://srr.ru/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=3.1.1" id="megamenu-js"></script>
+        <script type="text/javascript" src="https://srr.ru/wp-includes/js/comment-reply.min.js?ver=6.1.1" id="comment-reply-js"></script>
+        <script type="text/javascript" src="https://srr.ru/wp-content/plugins/si-captcha-for-wordpress/captcha/si_captcha.js?ver=1.0" id="si_captcha-js"></script><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        87 queries in 1,270 seconds. 
+        
+        
+        
+        
+        
+        
+        
+        </font></font><div id="goog-gt-" class="skiptranslate VIpgJd-yAWNEb-L7lbkb" dir="ltr"><div style="padding: 8px;"><div><div class="VIpgJd-yAWNEb-l4eHX"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Переводчик"></div></div></div><div style="padding: 8px; float: left; width: 100%;"><h1 class="VIpgJd-yAWNEb-r4nke VIpgJd-yAWNEb-mrxPge">Исходный текст</h1></div><div style="padding: 8px;"><div class="VIpgJd-yAWNEb-nVMfcd-fmcmS"></div></div><div class="VIpgJd-yAWNEb-cGMI2b" style="padding: 8px;"><div class="VIpgJd-yAWNEb-Z0Arqf-PLDbbf"><span class="VIpgJd-yAWNEb-Z0Arqf-hSRGPd">Предложить лучший вариант перевода</span></div><div class="VIpgJd-yAWNEb-fw42Ze-Z0Arqf-haAclf"><hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;"><div class="VIpgJd-yAWNEb-Z0Arqf-H9tDt"></div></div></div><div class="VIpgJd-yAWNEb-jOfkMb-Ne3sFf" style="display: none;"></div></div><div class="lwa"><div class="lwa-register lwa-register-default lwa-modal" style="display:none;">
+                    <h4>Зарегистрироваться на этом сайте</h4>
+                    <p><em class="lwa-register-tip">Пароль будет отправлен вам на e-mail.</em></p>
+                    <form class="lwa-register-form" action="https://srr.ru/ibo-nefig/?action=register" method="post">
+                        <div>
+                        <span class="lwa-status"></span>
+                        <p class="lwa-username">
+                            <label>Имя пользователя<br>
+                            <input type="text" name="user_login" id="user_login" class="input" size="20" tabindex="10"></label>
+                        </p>
+                        <p class="lwa-email">
+                            <label>E-mail<br>
+                            <input type="text" name="user_email" id="user_email" class="input" size="25" tabindex="20"></label>
+                        </p>
+                        
+        
+        <div class="si_captcha_small"><img id="si_image_reg" src="https://srr.ru/wp-content/plugins/si-captcha-for-wordpress/captcha/securimage_show.php?si_sm_captcha=1&amp;si_form_id=reg&amp;prefix=TWVibwUngyt7LVis" width="132" height="45" alt="CAPTCHA" title="CAPTCHA">
+            <input id="si_code_reg" name="si_code_reg" type="hidden" value="TWVibwUngyt7LVis">
+            <div id="si_refresh_reg">
+        <a href="#" rel="nofollow" title="Обновить" onclick="si_captcha_refresh('si_image_reg','reg','/wp-content/plugins/si-captcha-for-wordpress/captcha','https://srr.ru/wp-content/plugins/si-captcha-for-wordpress/captcha/securimage_show.php?si_sm_captcha=1&amp;si_form_id=reg&amp;prefix='); return false;">
+              <img class="si_captcha_refresh" src="https://srr.ru/wp-content/plugins/si-captcha-for-wordpress/captcha/images/refresh.png" width="22" height="20" alt="Обновить" onclick="this.blur();"></a>
+          </div>
+          </div>
+        
+        <p>
+         <label for="si_captcha_code">Введите код с картинки (CAPTCHA)<br>
+        <input id="si_captcha_code" name="si_captcha_code" class="input" type="text" value=""></label>
+        </p>
+        
+                                        <p class="submit">
+                            <input type="submit" name="wp-submit" id="wp-submit" class="button-primary" value="Регистрация" tabindex="100">
+                        </p>
+                        <input type="hidden" name="login-with-ajax" value="register">
+                        </div>
+                    </form>
+                </div></div><div id="goog-gt-" class="skiptranslate VIpgJd-yAWNEb-L7lbkb" dir="ltr"><div style="padding: 8px;"><div><div class="VIpgJd-yAWNEb-l4eHX"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Переводчик"></div></div></div><div style="padding: 8px; float: left; width: 100%;"><h1 class="VIpgJd-yAWNEb-r4nke VIpgJd-yAWNEb-mrxPge">Исходный текст</h1></div><div style="padding: 8px;"><div class="VIpgJd-yAWNEb-nVMfcd-fmcmS"></div></div><div class="VIpgJd-yAWNEb-cGMI2b" style="padding: 8px;"><div class="VIpgJd-yAWNEb-Z0Arqf-PLDbbf"><span class="VIpgJd-yAWNEb-Z0Arqf-hSRGPd">Предложить лучший вариант перевода</span></div><div class="VIpgJd-yAWNEb-fw42Ze-Z0Arqf-haAclf"><hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;"><div class="VIpgJd-yAWNEb-Z0Arqf-H9tDt"></div></div></div><div class="VIpgJd-yAWNEb-jOfkMb-Ne3sFf" style="display: none;"></div></div><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body>
