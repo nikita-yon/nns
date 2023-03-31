@@ -142,32 +142,48 @@ nav .search-container button:hover {
             <p>---callsign generator---</p><br>
     </div>
             <br><br>
-<h3>generated 10 callsign</h3>
+<h3>generated callsign</h3>
+<p>to choose the callsigns count, you need to write any number and click "ok" in the start!</p>
+<p>for example:</p>
+<img id="para" src="11.jpg" alt="HTML5 Icon" width="300" height="150">
 <h5><a href="pytan.html">generate again...</a></h5>
 <br>
             
 <py-script> 
-import random
-import string
-        
-print("10 Radioamateur callsigns successfully generated")       
-def get_random_string(length):
-            # choose from all lowercase letter
-            letters = string.ascii_uppercase
-            num = string.digits
-            result_str = ''.join(random.choice(letters + num) for i in range(length))
-            print("random radio callsign is:", result_str)
-            
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
-get_random_string(5)
+  import random
+  import string
+  
+  num = "0123456789"
+  number = int(input("times> "))
+  def alpha(num):       
+      letters1 = "ub", "TJ", "TK", "TI", "TZ", "TF",
+      "OL", "OT", "OM", "PP", "OZ", "OY", "OX", "UM", "UJ", "TY",
+      "FK", "FW", "FY", "GX", "GU", "7Z", "HZ", "JY", "JX", "JW",
+      "FG", "EZ", "EZ", "EX", "EU", "EV", "EL", "ES", "CN", "CU",
+      "CV", "CX", "BX", "BV", "ZA", "ZF", 
+      
+      letters2 = "XYZ", "CNA", "CYA", "AWZ", "HUA", "HWA",
+      "OUA", "OFA", "OEA", "JWA", "ZRA", "XTA", "XUA", "TYA", "TAA", "TDA",
+      "", "", "", "", "", "", "EZA", "EXA", "HBA", "PJA",
+      "", "", "", "", "", "", "", "", 
+                  
+      result_str1 = ''.join(random.choice(letters1))
+              
+  
+  
+      result_str2 = ''.join(random.choice(num))
+                  
+  
+  
+      result_str3 = ''.join(random.choice(letters2))
+  
+      print(result_str1 + str(result_str2) + result_str3)
+  
+  for _ in range(number):
+    alpha(num)
+  
+              
+              
 </py-script>             
 
 </body>
