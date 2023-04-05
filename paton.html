@@ -124,13 +124,13 @@ nav .search-container button:hover {
         <a href="index.html">home</a>
         <a  href="page5.html">support</a>
        <a href="about.html">Decode programs</a>
-       <a class="active" href="pytan.html">callsigns</a>
+       <a  href="pytan.html">callsigns</a>
        <a  href="111.html">Morse trainer</a>
        <a  href="translatoe.html">Morse Translator</a>
        <a  href="bands.html">HF bands</a>
        <a  href="schemes.html">radio circuits</a>
        <a  href="target.html">target</a>
-       <a  href="paton.html">Callsign translate</a>
+       <a class="active" href="paton.html">Callsign translate</a>
        <a  href="preflist.html">Callsign Prefixes</a>
         <div class="search-container">
         <form action="action.php">
@@ -142,56 +142,101 @@ nav .search-container button:hover {
     
     <div class="header" href="10.png">
             <h1>Radioamateur wedsite</h1>
-            <p>---callsign generator---</p><br>
+            <p>---callsign translater---</p><br>
     </div>
             <br><br>
-<h3>generated callsign</h3>
-<p>to choose the callsigns count, you need to write any number and click "ok" in the start!</p>
-<p>for example:</p>
-<img id="para" src="1111.jpg" alt="HTML5 Icon" width="300" height="150">
-<h2><a href="pytan.html">generate again...</a></h2>
-<h2><p>this callsign generator based on this image:</p></h2>
-<img id="para" src="cs.png" alt="HTML5 Icon" width="400" height="300">
-<br>
-<h2><p>also, you can find youre callsign to youre location here:</p></h2>
-<img id="para" src="kik.png" alt="HTML5 Icon" width="400" height="300">
-<br>
-            
-<py-script> 
-  import random
-  import string
-  
-  num = "0123456789"
-  number = int(input("times> "))
-  def alpha(num):       
-      letters1 = "UB", "TJ", "TK", "TI", "TZ", "TF",
-      "OL", "OT", "OM", "PP", "OZ", "OY", "OX", "UM", "UJ", "TY",
-      "FK", "FW", "FY", "GX", "GU", "7Z", "HZ", "JY", "JX", "JW",
-      "FG", "EZ", "EZ", "EX", "EU", "EV", "EL", "ES", "CN", "CU",
-      "CV", "CX", "BX", "BV", "ZA", "ZF", 
+<h3>callsign translater!</h3>
+<p>Write youre callsign and click enter!</p>
       
-      letters2 = "XYZ", "CNA", "CYA", "AWZ", "HUA", "HWA",
-      "OUA", "OFA", "OEA", "JWA", "ZRA", "XTA", "XUA", "TYA", "TAA", "TDA",
-      "", "", "", "", "", "", "EZA", "EXA", "HBA", "PJA",
-      "", "", "", "", "", "", "", "", 
-                  
-      result_str1 = ''.join(random.choice(letters1))
-              
-  
-  
-      result_str2 = ''.join(random.choice(num))
-                  
-  
-  
-      result_str3 = ''.join(random.choice(letters2))
-  
-      print(result_str1 + str(result_str2) + result_str3)
-  
-  for _ in range(number):
-    alpha(num)
-  
-              
-              
+<py-script> 
+    MORSE_CODE_DICT = { 'A':'Anna', 'B':'Boris',
+    'C':'tzapla(Цапля)', 'D':'Dmitry(Дмитрий)', 'E':'Elena(Елена)',
+    'F':'Fyodor(Фёдор)', 'G':'Grigory(Григорий)', 'H':'Hariton(Харитон)',
+    'I':'Ivan(Иван)', 'J':'Ivan kratkiy(Иван Краткий)', 'K':'Konstantin(Константин)',
+    'L':'Leonid(Леонид)', 'M':'Mihail(Михаил)', 'N':'Nikolay(Николай)',
+    'O':'Olga(Ольга)', 'P':'Pavel(Павел)', 'Q':'Shuka(щука)',
+    'R':'Roman(Роман)', 'S':'Simeon(Семён)', 'T':'Tatyana(Татьяна)',
+    'U':'Uliana(Ульяна)', 'V':'Zenia(Женя)', 'W':'Vasiliy(Василий)',
+    'X':'znak(Знак)', 'Y':'ery(Еры)', 'Z':'Zinaida(Зинаида)',
+    '1':'1', '2':'2', '3':'3',
+    '4':'4', '5':'5', '6':'6',
+    '7':'7', '8':'8', '9':'9.',
+    '0':'0', ', ':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    '(':'-.--.', ')':'-.--.-'}
+
+# Function to encrypt the string
+# according to the morse code chart
+def encrypt(message):
+cipher = ''
+for letter in message:
+if letter != ' ':
+
+# Looks up the dictionary and adds the
+# corresponding morse code
+# along with a space to separate
+# morse codes for different characters
+cipher += MORSE_CODE_DICT[letter] + ' '
+else:
+# 1 space indicates different characters
+# and 2 indicates different words
+cipher += ' '
+
+return cipher
+
+# Function to decrypt the string
+# from morse to english
+def decrypt(message):
+
+# extra space added at the end to access the
+# last morse code
+message += ' '
+
+decipher = ''
+citext = ''
+for letter in message:
+
+# checks for space
+if (letter != ' '):
+
+# counter to keep track of space
+i = 0
+
+# storing morse code of a single character
+citext += letter
+
+# in case of space
+else:
+# if i = 1 that indicates a new character
+i += 1
+
+# if i = 2 that indicates a new word
+if i == 2 :
+
+ # adding space to separate words
+decipher += ' '
+else:
+
+# accessing the keys using their values (reverse of encryption)
+decipher += list(MORSE_CODE_DICT.keys())[list(MORSE_CODE_DICT
+.values()).index(citext)]
+citext = ''
+
+return decipher
+
+# Hard-coded driver function to run the program
+def main():
+message = input("Input youre callsign> ")
+result = encrypt(message.upper())
+print ("Youre translated callsign> " + result)
+
+message = result
+result = decrypt(message)
+print ("Your callsign: " + result)
+
+# Executes the main function
+if __name__ == '__main__':
+main()
 </py-script>             
 
 </body>

@@ -127,6 +127,10 @@ nav .search-container button:hover {
      <a  href="translatoe.html">Morse Translator</a>
      <a  href="bands.html">HF bands</a>
      <a  href="schemes.html">radio circuits</a>
+     
+     <a  href="target.html">target</a>
+     <a  href="paton.html">Callsign translate</a>
+     <a  href="preflist.html">Callsign Prefixes</a>
       <div class="search-container">
       <form action="action.php">
           <input type="text" placeholder="search..." name="search">
@@ -165,7 +169,7 @@ nav .search-container button:hover {
             biquadFilter = audioCtx.createBiquadFilter();
             gainNode = audioCtx.createGain();
             biquadFilter.type = "lowpass";
-            biquadFilter.frequency.setValueAtTime(700, audioCtx.currentTime);
+            biquadFilter.frequency.setValueAtTime(600, audioCtx.currentTime);
             biquadFilter.Q.setValueAtTime(15, audioCtx.currentTime);
         
             oscillator.type = 'sine';
